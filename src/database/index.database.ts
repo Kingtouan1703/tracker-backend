@@ -1,7 +1,6 @@
 import sqlite3 from 'sqlite3'
 
 const db = new sqlite3.Database('./src/database/database.db', (error) => {
-    console.log({ error })
     console.log('Connected to SQLite database')
 })
 

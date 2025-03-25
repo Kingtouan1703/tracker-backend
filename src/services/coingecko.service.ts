@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { config } from '../config'
 
 type BasicCoin = {
@@ -28,13 +29,8 @@ class ConGeckoService {
         )
 
         try {
-            const response = await fetch(url.href)
-            if (!response.ok) {
-                throw new Error(
-                    `Error: ${response.status} - ${response.statusText}`
-                )
-            }
-            return (await response.json()) as T
+            const response = await axios.get<T>(url.href);
+            return response.data;
         } catch (error) {
             throw error
         }
