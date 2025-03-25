@@ -8,5 +8,6 @@ const config = {
     defaultCurrency: process.env.DEFAULT_CURRENCY || 'usd',
     precision: 18,
     createManyChunkSize: 1000,
+    port: process.env.PORT || 3000
 }
 export { config }
