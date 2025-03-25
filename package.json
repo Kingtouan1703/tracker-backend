@@ -3,7 +3,6 @@
     "version": "0.0.1",
     "description": "",
     "main": "index.js",
-    "type": "module",
     "scripts": {
         "start": "tsx watch src/index.ts",
         "start:prod": "node dist/index.js",
